@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML Examples</title>
+    <meta name="author" content="John Doe">
+    <meta name="description" content="This is a website about photography">
+    <meta name="generator" content="My Web Development Tool">
+    <meta name="keywords" content="photography, camera, images, portfolio">
+</head>
+
+<body>
+    <h1>Input Types Example</h1>
+    <form>
+        <label for="hiddenInput">Hidden Input:</label>
+        <input type="hidden" id="hiddenInput" name="hiddenInput" value="Hidden Value">
+        <br />
+        <label for="telInput">Telephone Input:</label>
+        <input type="tel" id="telInput" name="telInput">
+        <br />
+        <label for="emailInput">Email Input:</label>
+        <input type="email" id="emailInput" name="emailInput">
+        <br />
+        <label for="numberInput">Number Input:</label>
+        <input type="number" id="numberInput" name="numberInput">
+        <br />
+        <label for="rangeInput">Range Input:</label>
+        <input type="range" id="rangeInput" name="rangeInput">
+        <br />
+        <label for="searchInput">Search Input:</label>
+        <input type="search" id="searchInput" name="searchInput">
+        <br />
+        <label for="imageInput">Image Input:</label>
+        <input type="image" id="imageInput" src="image.png" alt="Submit">
+        <br />
+        <label for="weekInput">Week Input:</label>
+        <input type="week" id="weekInput" name="weekInput">
+        <br />
+        <label for="urlInput">URL Input:</label>
+        <input type="url" id="urlInput" name="urlInput">
+        <br />
+        <label for="datetimeLocalInput">DateTime-Local Input:</label>
+        <input type="datetime-local" id="datetimeLocalInput" name="datetimeLocalInput">
+        <br />
+        <label for="monthInput">Month Input:</label>
+        <input type="month" id="monthInput" name="monthInput">
+        <br />
+        <label for="timeInput">Time Input:</label>
+        <input type="time" id="timeInput" name="timeInput">
+        <br />
+    </form>
+
+    <h1>Meta Information Example</h1>
+    <p>Author: <span id="authorSpan"></span></p>
+    <p>Description: <span id="descriptionSpan"></span></p>
+    <p>Generator: <span id="generatorSpan"></span></p>
+    <p>Keywords: <span id="keywordsSpan"></span></p>
+
+    <script>
+        // Retrieving meta information values
+        var author = document.querySelector('meta[name="author"]').getAttribute('content');
+        var description = document.querySelector('meta[name="description"]').getAttribute('content');
+        var generator = document.querySelector('meta[name="generator"]').getAttribute('content');
+        var keywords = document.querySelector('meta[name="keywords"]').getAttribute('content');
+
+        // Updating spans with meta information values
+        document.getElementById('authorSpan').textContent = author;
+        document.getElementById('descriptionSpan').textContent = description;
+        document.getElementById('generatorSpan').textContent = generator;
+        document.getElementById('keywordsSpan').textContent = keywords;
+    </script>
+</body>
+
+</html>

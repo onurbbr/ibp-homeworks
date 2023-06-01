@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Canvas Application</title>
+    <style>
+        #myCanvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Canvas Application</h1>
+
+    <canvas id="myCanvas" width="400" height="300"></canvas>
+
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var context = canvas.getContext("2d");
+
+        // Drawing a rectangle
+        context.fillStyle = "red";
+        context.fillRect(50, 50, 200, 100);
+
+        // Drawing a circle
+        context.beginPath();
+        context.arc(300, 150, 50, 0, 2 * Math.PI);
+        context.fillStyle = "blue";
+        context.fill();
+        context.stroke();
+    </script>
+</body>
+
+</html>
